@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      ionic web
+    </ion-title>
+    <ion-button  slot="end" (click)="dataClick()" color="danger">
+      DATA 
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+    
+    <ion-item *ngFor="let data of users"  (click)="rowClick(data)">
+      <ion-avatar slot="start">
+        <img src="https://picsum.photos/id/0/200" />
+      </ion-avatar>
+     <ion-label >
+       <strong> <h2>{{data.name}}</h2> </strong>
+        <h3>{{data.email}}</h3>
+        <p>{{data.phone}}</p>
+      </ion-label>
+    </ion-item>
+</ion-content>
